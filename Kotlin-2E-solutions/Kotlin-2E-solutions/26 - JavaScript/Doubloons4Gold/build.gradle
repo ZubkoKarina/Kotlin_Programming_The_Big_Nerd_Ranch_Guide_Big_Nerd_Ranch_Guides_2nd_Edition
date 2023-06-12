@@ -1,0 +1,38 @@
+plugins {
+    id 'org.jetbrains.kotlin.multiplatform' version '1.5.21'
+}
+
+group = 'com.bignerdranch'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+kotlin {
+    jvm()
+    macosX64 {
+        binaries {
+            executable()
+        }
+    }
+    js {
+        browser()
+        binaries {
+            executable()
+        }
+    }
+    sourceSets {
+        commonMain {
+
+        }
+        commonTest {
+
+        }
+        jsMain {
+            dependencies {
+                implementation "org.jetbrains.kotlinx:kotlinx-html-js:0.7.3"
+            }
+        }
+    }
+}

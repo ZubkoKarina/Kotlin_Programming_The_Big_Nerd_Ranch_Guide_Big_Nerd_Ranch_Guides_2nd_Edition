@@ -31,6 +31,9 @@ fun main(args: Array<String>) {
     println(numbers0)
     val numbers1 = (1 until 5).toList()
     println(numbers1)
+
+    val omSymbol = '\u0950'
+    print(omSymbol)
 }
 /*
 * control flow - поток выполнния
@@ -60,5 +63,6 @@ fun main(args: Array<String>) {
 * "" + "" - конкатонация строк
 * "$name abc" -
 * """ """ - необработанная строка
-* readLine() - чтение с консоли 
+* readLine() - чтение с консоли
+* regular expression -
 * */

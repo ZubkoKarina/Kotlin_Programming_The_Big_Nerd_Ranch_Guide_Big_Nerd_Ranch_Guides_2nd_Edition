@@ -34,6 +34,12 @@ fun main(args: Array<String>) {
 
     val omSymbol = '\u0950'
     print(omSymbol)
+
+    val name: String? = "Karina"
+    name?.let{
+        val message = "Hello, $it"
+        println(message)
+    }
 }
 /*
 * control flow - поток выполнния
@@ -64,5 +70,7 @@ fun main(args: Array<String>) {
 * "$name abc" -
 * """ """ - необработанная строка
 * readLine() - чтение с консоли
-* regular expression -
+* regular expression
+* nullable и non-nullable
+*
 * */

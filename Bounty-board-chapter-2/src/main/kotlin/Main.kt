@@ -72,5 +72,4 @@ fun main(args: Array<String>) {
 * readLine() - чтение с консоли
 * regular expression
 * nullable и non-nullable
-*
 * */

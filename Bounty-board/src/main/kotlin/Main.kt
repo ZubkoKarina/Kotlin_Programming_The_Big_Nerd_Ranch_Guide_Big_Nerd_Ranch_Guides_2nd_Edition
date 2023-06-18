@@ -13,6 +13,7 @@ fun main(args: Array<String>) {
     println(temp_str)
 }
 /*
+* kotlinc-jvm - компилятор
 * Kotlin REPL(как jshell) - Read, Evaluate, Print, Loop (прочитать, выполнить, вывести, повторить).
 * исходный(.kt)->байт-код jvm->выполнение
 * var/val - camelCase

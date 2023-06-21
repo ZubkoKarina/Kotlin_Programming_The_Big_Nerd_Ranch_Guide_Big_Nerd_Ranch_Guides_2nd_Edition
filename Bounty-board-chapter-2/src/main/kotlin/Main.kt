@@ -40,6 +40,12 @@ fun main(args: Array<String>) {
         val message = "Hello, $it"
         println(message)
     }
+    //Conditional Expression
+    val quest0:String = if(true){
+        "Hello quest"
+    } else {
+        "By quest"
+    }
 }
 /*
 * control flow - поток выполнния
@@ -72,4 +78,5 @@ fun main(args: Array<String>) {
 * readLine() - чтение с консоли
 * regular expression
 * nullable и non-nullable
+* Conditional Expression - условные выражения
 * */

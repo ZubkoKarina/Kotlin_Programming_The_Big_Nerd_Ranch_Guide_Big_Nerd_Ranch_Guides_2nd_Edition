@@ -59,6 +59,8 @@ fun main(args: Array<String>) {
 * && - и
 * || - или
 * .. - интервал
+* Conditional Expression - условные выражения
+* выражение when всегда должно быть исчерпывающим (exhaustive)
 * in - проверка наличия значений в интервале
 * аргумент while только ==, in, is или без аргументв
 * is - проверка типа обьекта
@@ -85,5 +87,5 @@ fun main(args: Array<String>) {
 * readLine() - чтение с консоли
 * regular expression
 * nullable и non-nullable
-* Conditional Expression - условные выражения
+*
 * */

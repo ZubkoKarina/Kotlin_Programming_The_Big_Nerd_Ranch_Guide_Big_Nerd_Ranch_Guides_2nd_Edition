@@ -46,6 +46,13 @@ fun main(args: Array<String>) {
     } else {
         "By quest"
     }
+    //Conditional Expression 0
+    val temp: Int = 3;
+    val quest1:String = when(temp){
+        in 1..6 -> "New"
+        in 7..9 -> "Old"
+        else -> "Invalid val"
+    }
 }
 /*
 * control flow - поток выполнния

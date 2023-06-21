@@ -52,6 +52,13 @@ fun main(args: Array<String>) {
     obtainQuest(1)
     square(56)
     forgeItem("sward", "iron", false, 5)
+    println (forgeItem(
+        quantity = 5,
+        itemName = "sward",
+        material = "gold",
+        encrustWithJewels = false
+    ))
+
     //task 1
     val numbers = (1..500).toList()
     println(numbers)
@@ -84,8 +91,10 @@ private fun forgeItem(
     itemName: String,
     material: String,
     encrustWithJewels: Boolean = false,
-    quatity: Int = 1
+    quantity: Int = 1
 ): String = "end"
+
+
 /*
 * control flow - поток выполнния
 * && - и
@@ -105,12 +114,13 @@ private fun forgeItem(
 * private fun myFun(имя: тип): String {
 *   return ""
 * }
+* Именованние аргументов функции позволяет передават параменты в любо порядке
 * параметры всегда val
 * when - замена множесва(типо switch)
 * параметр - то что требуется функции
 * аргумент - то что передается при вызове
 * без return - unit
-* тип Nothing - сообщает компелятору что функция гарантированно не будет выполнена успешно
+* тип Nothing - сообщает компилятору что функция гарантированно не будет выполнена успешно
 * использование в TODO(), то что еще предстоит реализовать
 * `is`() - можно использовать зарезервированные слова
 * или же `users should`() с пробелами

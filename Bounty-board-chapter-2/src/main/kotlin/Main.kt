@@ -1,3 +1,5 @@
+import java.util.concurrent.BrokenBarrierException
+
 const val  HERO_NAME = "Madrigal"
 fun main(args: Array<String>) {
     println("Program arguments: ${args.joinToString()}")
@@ -46,6 +48,8 @@ fun main(args: Array<String>) {
             "Invalid"
         }
     }
+    
+    obtainQuest(1)
     //task 1
     val numbers = (1..500).toList()
     println(numbers)
@@ -61,6 +65,16 @@ fun main(args: Array<String>) {
     name?.let{
         val message = "Hello, $it"
         println(message)
+    }
+}
+private fun obtainQuest(
+    playerLevel: Int,
+    playerClass: String = "paladin",
+    hasBefriendedBarbarians: Boolean = false
+): String{
+    return when (playerLevel){
+        1-> "txt0"
+        else -> "txt1"
     }
 }
 /*

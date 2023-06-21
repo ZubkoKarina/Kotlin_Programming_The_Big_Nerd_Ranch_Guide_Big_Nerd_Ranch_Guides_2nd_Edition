@@ -50,6 +50,8 @@ fun main(args: Array<String>) {
     }
     
     obtainQuest(1)
+    square(56)
+    forgeItem("sward", "iron", false, 5)
     //task 1
     val numbers = (1..500).toList()
     println(numbers)
@@ -77,6 +79,13 @@ private fun obtainQuest(
         else -> "txt1"
     }
 }
+private fun square(number: Int): Int = number * number
+private fun forgeItem(
+    itemName: String,
+    material: String,
+    encrustWithJewels: Boolean = false,
+    quatity: Int = 1
+): String = "end"
 /*
 * control flow - поток выполнния
 * && - и

@@ -1,4 +1,5 @@
 import java.util.concurrent.BrokenBarrierException
+import kotlin.math.round
 
 const val  HERO_NAME = "Madrigal"
 fun main(args: Array<String>) {
@@ -59,6 +60,8 @@ fun main(args: Array<String>) {
         encrustWithJewels = false
     ))
 
+    println("Rounded number: " + (mathRoundedNum(3.75)))
+    println("Rounded number: ${mathRoundedNum(3.75)}")
     //task 1
     val numbers = (1..500).toList()
     println(numbers)
@@ -94,6 +97,11 @@ private fun forgeItem(
     quantity: Int = 1
 ): String = "end"
 
+private fun mathRoundedNum(number: Double)
+: Long{
+    println("Original number: $number")
+    return round(number).toLong()
+}
 
 /*
 * control flow - поток выполнния
@@ -124,6 +132,13 @@ private fun forgeItem(
 * использование в TODO(), то что еще предстоит реализовать
 * `is`() - можно использовать зарезервированные слова
 * или же `users should`() с пробелами
+* Byte 8
+* Short 16
+* Int 32
+* Long 64
+* Float 32
+* Double 64
+* Числа с плавающей точкой - аппроксимация
 * "" + "" - конкатонация строк
 * "$name abc" -
 * """ """ - необработанная строка

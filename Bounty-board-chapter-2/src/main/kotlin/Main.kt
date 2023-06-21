@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
         in 7..9 -> "Old"
         else -> "Invalid val"
     }
-    val quest: String = when (playerLevel++) {
+    val quest: String = when (val playerLevel_0 = playerLevel++) {
         1 -> "Meet Mr. Bubbles in the land of soft things."
         in 2..5 -> {
             val canTalkToBarbarians = false

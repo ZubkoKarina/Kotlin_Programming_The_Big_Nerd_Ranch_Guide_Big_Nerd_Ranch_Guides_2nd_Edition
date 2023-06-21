@@ -37,6 +37,15 @@ fun main(args: Array<String>) {
         }
         else -> "Explore new territories."
     }
+    // when без аргументов
+    val temp_0: String = when {
+        1>2 -> {
+            "Good"
+        }
+        else -> {
+            "Invalid"
+        }
+    }
     //task 1
     val numbers = (1..500).toList()
     println(numbers)
@@ -61,6 +70,7 @@ fun main(args: Array<String>) {
 * .. - интервал
 * Conditional Expression - условные выражения
 * выражение when всегда должно быть исчерпывающим (exhaustive)
+* c when только in is ==
 * in - проверка наличия значений в интервале
 * аргумент while только ==, in, is или без аргументв
 * is - проверка типа обьекта

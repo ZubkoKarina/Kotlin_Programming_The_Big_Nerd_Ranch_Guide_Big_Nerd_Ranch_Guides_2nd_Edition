@@ -12,7 +12,20 @@ fun main(args: Array<String>) {
     }
     println("Time passes...")
     println("The hero returns from her quest.")
-    val quest: String = when (playerLevel) {
+    //Conditional Expression
+    val quest0:String = if(true){
+        "Hello quest"
+    } else {
+        "By quest"
+    }
+    //Conditional Expression 0
+    val temp: Int = 3;
+    val quest1:String = when(temp){
+        in 1..6 -> "New"
+        in 7..9 -> "Old"
+        else -> "Invalid val"
+    }
+    val quest: String = when (playerLevel++) {
         1 -> "Meet Mr. Bubbles in the land of soft things."
         in 2..5 -> {
             val canTalkToBarbarians = false
@@ -39,19 +52,6 @@ fun main(args: Array<String>) {
     name?.let{
         val message = "Hello, $it"
         println(message)
-    }
-    //Conditional Expression
-    val quest0:String = if(true){
-        "Hello quest"
-    } else {
-        "By quest"
-    }
-    //Conditional Expression 0
-    val temp: Int = 3;
-    val quest1:String = when(temp){
-        in 1..6 -> "New"
-        in 7..9 -> "Old"
-        else -> "Invalid val"
     }
 }
 /*

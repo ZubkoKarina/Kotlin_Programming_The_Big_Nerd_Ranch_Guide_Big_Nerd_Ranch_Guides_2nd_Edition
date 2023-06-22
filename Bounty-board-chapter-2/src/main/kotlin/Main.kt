@@ -90,11 +90,12 @@ private fun obtainQuest(
     playerLevel: Int,
     playerClass: String = "paladin",
     hasBefriendedBarbarians: Boolean = false
-): String{
+): String?{
     return when (playerLevel){
         1 -> "Quest for level 1"
         2 -> "Quest for level 2 - madrigal"
-        else -> "Invalid quest"
+        in 3..67 -> "Invalid quest"
+        else -> null
     }
 }
 private fun square(number: Int): Int = number * number
@@ -114,7 +115,7 @@ private fun mathRoundedNum(number: Double)
 private fun readLine(){
     println("""|$HERO_NAME approaches the bounty board.
         |It reads:
-        |"${obtainQuest(playerLevel = 2).replace("[Mm]adrigal".toRegex(), "xxxxxxxxxx")}"
+        |"${obtainQuest(playerLevel = 2)?.replace("[Mm]adrigal".toRegex(), "xxxxxxxxxx")}"
     """.trimMargin()
     )
 }
@@ -170,4 +171,8 @@ private fun readLine(){
 * все строки - неизменяемы
 * == - структурное равенство -> equals() в Java
 * === - оператор ссылочного равенсва
+* nullable и non-nullable
+*
+*
+*
 * */

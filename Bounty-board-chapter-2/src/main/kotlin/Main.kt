@@ -98,6 +98,9 @@ private fun obtainQuest(
     playerClass: String = "paladin",
     hasBefriendedBarbarians: Boolean = false
 ): String?{
+    if(playerLevel <= 0){
+        throw IllegalArgumentException("The player`s level must be at least 1.")
+    }
     return when (playerLevel){
         1 -> "Quest for level 1"
         2 -> "Quest for level 2 - madrigal"
@@ -190,6 +193,10 @@ private fun readLine(){
 * readLine()!!.replace(...).toInt() означает: «Меня не интересует, вернет readLine значение null или нет, все равно преобразуй его в число!»
 * Использование if-else, ?:, ?., !!, let:
 *   if-else: для простой условной логики, между двумя вариантами действий
+*   ?:(Elvis): для обработки значений и предоставление значенний по умолчанию
+*   ?.: для вызова если обьект не равен null
+*   let: для выполнения дополнительных операций внутри лямба-выражений
+* throw - выдала исключенний
 *
 *
 *

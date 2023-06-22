@@ -85,6 +85,12 @@ fun main(args: Array<String>) {
     println("${"34g535.".matches("""\d+""".toRegex())}")
 
     readLine()
+    // let
+    val str: String? = "Hello"
+    str?.let{println(it)}
+    //?:
+    val defultValue = null
+    val result = nullableValue ?: defultValue
 }
 private fun obtainQuest(
     playerLevel: Int,
@@ -115,7 +121,7 @@ private fun mathRoundedNum(number: Double)
 private fun readLine(){
     println("""|$HERO_NAME approaches the bounty board.
         |It reads:
-        |"${obtainQuest(playerLevel = 2)?.replace("[Mm]adrigal".toRegex(), "xxxxxxxxxx")}"
+        |"${obtainQuest(playerLevel = 2)?.let { it.replace("[Mm]adrigal".toRegex(), "xxxxxxxxxx") }}"
     """.trimMargin()
     )
 }
@@ -176,7 +182,7 @@ private fun readLine(){
 * ошибки аремени выполнения - после компиляции
 * 1. использовать non-nullable если это возможно
 * 2. if(<> != null)
-* 3. ?. - safe call operator - самый надежный 
-*
-*
+* 3. ?. - safe call operator - самый надежный
+* let - принимает обьект как параметр и предоставляет доступ к нему внутри лямба-выражения
+* ?: оператор обьединения с null(Elvis) - "если слева от меня стоит null, то выполняй операцию справа меня"
 * */

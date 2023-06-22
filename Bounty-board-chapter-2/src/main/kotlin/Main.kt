@@ -89,8 +89,9 @@ fun main(args: Array<String>) {
     val str: String? = "Hello"
     str?.let{println(it)}
     //?:
-    val defultValue = null
-    val result = nullableValue ?: defultValue
+    val nullableValue: Int = 35
+    val defultValue: Int = 45
+    println(nullableValue ?: defultValue)
 }
 private fun obtainQuest(
     playerLevel: Int,
@@ -182,7 +183,14 @@ private fun readLine(){
 * ошибки аремени выполнения - после компиляции
 * 1. использовать non-nullable если это возможно
 * 2. if(<> != null)
-* 3. ?. - safe call operator - самый надежный
+* 3. ?. - safe call operator(безопасный вызов)
 * let - принимает обьект как параметр и предоставляет доступ к нему внутри лямба-выражения
 * ?: оператор обьединения с null(Elvis) - "если слева от меня стоит null, то выполняй операцию справа меня"
+* !! - оператор утверждения не-null-значения(non-null assertion operator)(оператор двойного восклицания)
+* readLine()!!.replace(...).toInt() означает: «Меня не интересует, вернет readLine значение null или нет, все равно преобразуй его в число!»
+* Использование if-else, ?:, ?., !!, let:
+*   if-else: для простой условной логики, между двумя вариантами действий
+*
+*
+*
 * */

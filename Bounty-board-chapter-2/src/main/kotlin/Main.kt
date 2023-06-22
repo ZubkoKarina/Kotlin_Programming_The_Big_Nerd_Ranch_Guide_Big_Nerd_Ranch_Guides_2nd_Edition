@@ -93,6 +93,8 @@ fun main(args: Array<String>) {
     println(nullableValue ?: defultValue)
 
     readLine()
+
+    println(divide(5, 7))
 }
 private fun obtainQuest(
     playerLevel: Int,
@@ -134,6 +136,11 @@ private fun readLine(){
         "$HERO_NAME, can`t read what`s on the bounty board.${e.message}"
     }
     println(message)
+}
+
+private fun divide(a: Int, b:Int): Double{
+    require(b!=0){"Devidor must not be zero."}
+    return a.toDouble()/b.toDouble()
 }
 
 /*
@@ -210,6 +217,10 @@ private fun readLine(){
 *    } catch(e: Exception){
 *      //обработка исключения
 *    }
+* функции проверки предусловий(precondition function) - позволяет задать условия, которые должны быть истинными до выполненея кода
+* require - проверяет значение на null и возращяет его если оно не равно null, в обратном случае выдает исключение IllegalArgumentException
+*
+*
 *
 *
 * */

@@ -84,7 +84,6 @@ fun main(args: Array<String>) {
     //regular expression 0
     println("${"34g535.".matches("""\d+""".toRegex())}")
 
-    readLine()
     // let
     val str: String? = "Hello"
     str?.let{println(it)}
@@ -92,6 +91,8 @@ fun main(args: Array<String>) {
     val nullableValue: Int = 35
     val defultValue: Int = 45
     println(nullableValue ?: defultValue)
+
+    readLine()
 }
 private fun obtainQuest(
     playerLevel: Int,
@@ -123,11 +124,16 @@ private fun mathRoundedNum(number: Double)
 }
 
 private fun readLine(){
-    println("""|$HERO_NAME approaches the bounty board.
+    val message: String = try {
+        //10/0
+        """|$HERO_NAME approaches the bounty board.
         |It reads:
         |"${obtainQuest(playerLevel = 2)?.let { it.replace("[Mm]adrigal".toRegex(), "xxxxxxxxxx") }}"
     """.trimMargin()
-    )
+    } catch (e:Exception){
+        "$HERO_NAME, can`t read what`s on the bounty board.${e.message}"
+    }
+    println(message)
 }
 
 /*
@@ -196,8 +202,14 @@ private fun readLine(){
 *   ?:(Elvis): для обработки значений и предоставление значенний по умолчанию
 *   ?.: для вызова если обьект не равен null
 *   let: для выполнения дополнительных операций внутри лямба-выражений
-* throw - выдала исключенний
-*
+* throw - выдача исключенний
+* Исключения прерывают нормальное выполнение программы. Они предоставляют ошибочное состояние, которое надо исправить.
+* try и catch - указывает как должны обрабатываться исключения
+*    try{
+*      //код который может вызвать исключение
+*    } catch(e: Exception){
+*      //обработка исключения
+*    }
 *
 *
 * */

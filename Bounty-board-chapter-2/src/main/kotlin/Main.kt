@@ -78,6 +78,13 @@ fun main(args: Array<String>) {
         val message = "Hello, $it"
         println(message)
     }
+    //regular expression
+    val pattern = "\\d+".toRegex()
+    println("${"12345678".matches(pattern)}")
+    //regular expression 0
+    println("${"34g535.".matches("""\d+""".toRegex())}")
+
+    readLine()
 }
 private fun obtainQuest(
     playerLevel: Int,
@@ -101,6 +108,14 @@ private fun mathRoundedNum(number: Double)
 : Long{
     println("Original number: $number")
     return round(number).toLong()
+}
+
+private fun readLine(){
+    println("""|$HERO_NAME approaches the bounty board.
+        |It reads:
+        |"${obtainQuest(playerLevel = 2).replace("Madrigal", "xxxxxxxxxx")}"
+    """.trimMargin()
+    )
 }
 
 /*
@@ -139,11 +154,18 @@ private fun mathRoundedNum(number: Double)
 * Float 32
 * Double 64
 * Числа с плавающей точкой - аппроксимация
+* BigDecimal или round()
+* "%.2f" - форматная строка
 * "" + "" - конкатонация строк
-* "$name abc" -
-* """ """ - необработанная строка
+* "$name abc" - интерполяция строк
+* ${ваше выражение}
+* Выражение(expression) - фрагмент кода, который вычесляет значение и возращает результат
+* Инструкция(statement) - фрагмент кода, который выполняет определенное действие
+* """ """ - необработанная строка(raw string)
 * readLine() - чтение с консоли
 * regular expression
+* toRegex() - создание регулярных выражений
+* matches() - проверка соответствия строки регуляторному выражению
 * nullable и non-nullable
 *
 * */

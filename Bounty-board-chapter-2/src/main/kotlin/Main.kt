@@ -92,8 +92,9 @@ private fun obtainQuest(
     hasBefriendedBarbarians: Boolean = false
 ): String{
     return when (playerLevel){
-        1-> "txt0"
-        else -> "txt1"
+        1 -> "Quest for level 1"
+        2 -> "Quest for level 2 - Madrigal"
+        else -> "Invalid quest"
     }
 }
 private fun square(number: Int): Int = number * number

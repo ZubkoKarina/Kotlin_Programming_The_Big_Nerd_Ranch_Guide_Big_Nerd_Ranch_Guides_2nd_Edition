@@ -93,7 +93,7 @@ private fun obtainQuest(
 ): String{
     return when (playerLevel){
         1 -> "Quest for level 1"
-        2 -> "Quest for level 2 - Madrigal"
+        2 -> "Quest for level 2 - madrigal"
         else -> "Invalid quest"
     }
 }
@@ -114,7 +114,7 @@ private fun mathRoundedNum(number: Double)
 private fun readLine(){
     println("""|$HERO_NAME approaches the bounty board.
         |It reads:
-        |"${obtainQuest(playerLevel = 2).replace("Madrigal", "xxxxxxxxxx")}"
+        |"${obtainQuest(playerLevel = 2).replace("[Mm]adrigal".toRegex(), "xxxxxxxxxx")}"
     """.trimMargin()
     )
 }
@@ -167,6 +167,7 @@ private fun readLine(){
 * regular expression
 * toRegex() - создание регулярных выражений
 * matches() - проверка соответствия строки регуляторному выражению
-* nullable и non-nullable
-*
+* все строки - неизменяемы
+* == - структурное равенство -> equals() в Java
+* === - оператор ссылочного равенсва
 * */

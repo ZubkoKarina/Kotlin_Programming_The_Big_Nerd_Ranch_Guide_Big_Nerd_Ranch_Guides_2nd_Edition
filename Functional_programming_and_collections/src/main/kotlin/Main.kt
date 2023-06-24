@@ -1,7 +1,19 @@
+import Narration.narrate
 fun main(args: Array<String>) {
-    println("Hello World!")
-
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
     println("Program arguments: ${args.joinToString()}")
+    //после count - литерал функции
+    println("KarinaZubko".count({ letter -> letter == 'k' }))
+    narrate("A hero exters the woen of Kronstadt. What is their name?")
 }
+/*
+* fun - именованные функции
+* анонимные функции - лямбда-функции
+* Alonzo Church 1930 - лямбда-исчисления
+*
+*
+*
+*
+*
+*
+*
+*/

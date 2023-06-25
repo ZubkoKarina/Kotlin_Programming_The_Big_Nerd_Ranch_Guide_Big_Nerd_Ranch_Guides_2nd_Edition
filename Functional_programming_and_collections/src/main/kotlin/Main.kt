@@ -20,7 +20,9 @@ fun main(args: Array<String>) {
     }
     println("${Narration.loudNarration("Karina`s string", "excited")}")
     Narration.changeNarratorMood()
-    Narration.narrate("Katrina heads to the town square")
+    Narration.narrate("Katrina heads to the town square") { message ->
+        "\u001b[33;1m$message\u001b[0m"
+    }
 }
 /*
 * fun - именованные функции

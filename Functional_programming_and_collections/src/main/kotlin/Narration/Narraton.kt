@@ -2,12 +2,14 @@ package Narration
 import kotlin.random.Random
 import kotlin.random.nextInt
 
-var narrationModifier = {message: String ->
-    val numExclamationPoints = 3
-    message.uppercase()+"!".repeat(numExclamationPoints)
-}
-fun narrate(message: String) {
+var narrationModifier: (String) -> String = { it }
+fun narrate(
+    message: String,
+    modifier: (String) -> String = {
+    narrationModifier(it) }
+) {
     println(narrationModifier(message))
+    println(modifier(message))
 }
 fun calculate(operation: (Int, Int) -> Int){
     val result = operation(5, 3)

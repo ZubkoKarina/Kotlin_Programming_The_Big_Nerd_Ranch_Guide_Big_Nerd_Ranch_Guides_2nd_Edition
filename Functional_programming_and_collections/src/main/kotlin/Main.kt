@@ -2,7 +2,8 @@
 fun main(args: Array<String>) {
     println("Program arguments: ${args.joinToString()}")
     //после count - литерал функции
-    println("KarinaZubko".count({ letter -> letter == 'k' }))
+    println("KarinaZubko".count({ letter: Char -> letter == 'k' }))
+    println("ZubkoKarina123".count({letter -> letter.isDigit()}))
     Narration.narrate("A hero exters the woen of Kronstadt. What is their name?")
     //a simple example of lambda expressions
     val printHello: () -> Unit = {println("Hello")}
@@ -12,16 +13,27 @@ fun main(args: Array<String>) {
     }
     println("${sum(3,4675)}")
     Narration.calculate{x, y -> x+y}
+    //anon fun
+    val sumA = fun(a:Int, b:Int):Int{
+        return a+b
+    }
 }
 /*
 * fun - именованные функции
 * анонимные функции - лямбда-функции
 * Alonzo Church 1930 - лямбда-исчисления
-* val lambdaName: (param1: Type1, param2: Type2, ...) -> ReturnType = { arg1, arg2, ... ->
-*   //тело функции
-*   //..
-*   //возращяемое значение
-* }
+* Синтаксис лямбда-функции:
+*    val lambdaName: (param1: Type1, param2: Type2, ...) -> ReturnType = { arg1, arg2, ... ->
+*      //тело функции
+*      //..
+*      //возращяемое значение
+*    }
+* Синтаксис антонимной функции:
+*   fun(argument1: Type1, argument2: Type2, ...): ReturnType {
+*       // тело функции
+*       // ...
+*       // возвращаемое значение
+*   }
 *
 *
 *

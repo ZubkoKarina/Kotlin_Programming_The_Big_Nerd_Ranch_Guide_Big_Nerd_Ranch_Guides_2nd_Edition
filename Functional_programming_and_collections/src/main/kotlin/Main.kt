@@ -11,6 +11,7 @@ fun main(args: Array<String>) {
         a+b
     }
     println("${sum(3,4675)}")
+    Narration.calculate{x, y -> x+y}
 }
 /*
 * fun - именованные функции

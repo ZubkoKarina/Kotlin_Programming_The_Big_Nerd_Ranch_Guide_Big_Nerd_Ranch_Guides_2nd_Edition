@@ -11,3 +11,8 @@ fun narrate(
         narrationModifier()
     }())
 }
+
+fun calculate(operation: (Int, Int) -> Int){
+    val result = operation(5, 3)
+    println("Result:  $result")
+}

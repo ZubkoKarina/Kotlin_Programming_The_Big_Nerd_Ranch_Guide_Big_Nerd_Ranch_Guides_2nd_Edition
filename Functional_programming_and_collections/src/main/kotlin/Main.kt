@@ -19,6 +19,8 @@ fun main(args: Array<String>) {
         return a+b
     }
     println("${Narration.loudNarration("Karina`s string", "excited")}")
+    Narration.changeNarratorMood()
+    Narration.narrate("Katrina heads to the town square")
 }
 /*
 * fun - именованные функции

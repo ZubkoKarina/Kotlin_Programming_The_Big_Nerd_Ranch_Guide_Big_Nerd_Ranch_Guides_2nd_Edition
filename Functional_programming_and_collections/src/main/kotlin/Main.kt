@@ -48,7 +48,7 @@ fun main(args: Array<String>) {
 *    val narrationModifier:() -> String = {}
 * а:
 *    val narrationModifier = {}
-*
+* Если функция получает тип функции в последнем параментре, крглые скобки можно опустить 
 *
 *
 *

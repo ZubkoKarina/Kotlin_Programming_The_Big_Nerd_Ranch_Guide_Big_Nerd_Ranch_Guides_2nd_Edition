@@ -3,6 +3,7 @@ fun main(args: Array<String>) {
     println("Program arguments: ${args.joinToString()}")
     //после count - литерал функции
     println("KarinaZubko".count({ letter: Char -> letter == 'k' }))
+    println("KarinaZubko0000".count({ it == '0' }))
     println("ZubkoKarina123".count({letter -> letter.isDigit()}))
     Narration.narrate("A hero exters the woen of Kronstadt. What is their name?")
     //a simple example of lambda expressions
@@ -17,6 +18,7 @@ fun main(args: Array<String>) {
     val sumA = fun(a:Int, b:Int):Int{
         return a+b
     }
+    println("${Narration.loudNarration("Karina`s string", "excited")}")
 }
 /*
 * fun - именованные функции
@@ -34,7 +36,7 @@ fun main(args: Array<String>) {
 *       // ...
 *       // возвращаемое значение
 *   }
-*
+* it - конструкция обращения к единственному параментру в лямбда-выражении(только если один парамент!)
 *
 *
 *

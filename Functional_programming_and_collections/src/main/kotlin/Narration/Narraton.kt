@@ -1,8 +1,8 @@
 package Narration
 
-val narrationModifier: (String) -> String = {
+val narrationModifier = {message: String ->
     val numExclamationPoints = 3
-    it.uppercase()+"!".repeat(numExclamationPoints)
+    message.uppercase()+"!".repeat(numExclamationPoints)
 }
 fun narrate(message: String) {
     println(narrationModifier(message))

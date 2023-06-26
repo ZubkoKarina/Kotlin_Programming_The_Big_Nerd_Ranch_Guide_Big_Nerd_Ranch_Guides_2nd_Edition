@@ -63,3 +63,9 @@ fun changeNarratorMood() {
     narrationModifier = modifier
     narrate("The narrator begins to feel $mood")
 }
+fun createTitle(name: String): String{
+    return when{
+        name.count{it.lowercase() in "aeiou"} > 4 -> "The Master of Vowel"
+        else -> "The Renowned Hero"
+    }
+}

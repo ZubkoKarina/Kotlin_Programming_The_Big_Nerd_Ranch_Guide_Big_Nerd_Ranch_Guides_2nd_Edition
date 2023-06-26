@@ -1,4 +1,4 @@
-
+const val HERO_NAME = "KarinaZ"
 fun main(args: Array<String>) {
     println("Program arguments: ${args.joinToString()}")
     //после count - литерал функции
@@ -20,9 +20,13 @@ fun main(args: Array<String>) {
     }
     println("${Narration.loudNarration("Karina`s string", "excited")}")
     Narration.changeNarratorMood()
-    Narration.narrate("Katrina heads to the town square") { message ->
+    Narration.narrate("$HERO_NAME heads to the town square") { message ->
         "\u001b[33;1m$message\u001b[0m"
     }
+    require(HERO_NAME != null && HERO_NAME.isNotEmpty()){
+        "The hero must have a name"
+    }
+    Narration.narrate("$HERO_NAME, ${Narration.createTitle(HERO_NAME)}, heads to the town square")
 }
 /*
 * fun - именованные функции

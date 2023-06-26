@@ -64,7 +64,26 @@ fun changeNarratorMood() {
         5 -> {
             mood = "lazy"
             modifier = { message ->
-                "Lazy mood, ${message.take(message.length/2)}?"
+                "Lazy mood, ${message.take(message.length/2)}"
+            }
+        }
+        6 -> {
+            mood = "mysterious"
+            modifier = { message ->
+                "Mysterious mood, ${message.replace(Regex("[LET]")){matchResult -> 
+                    when (matchResult.value){
+                        "L" -> "1"
+                        "E" -> "3"
+                        "T" -> "7"
+                    else -> matchResult.value
+                    } 
+                }}"
+            }
+        }
+        7 -> {
+            mood = "poetic"
+            modifier = { message: String ->
+                "Poetic mood, ${message.replace(Regex(" "), { " ".repeat(Random.nextInt(1, 11)) })}"
             }
         }
         else -> {

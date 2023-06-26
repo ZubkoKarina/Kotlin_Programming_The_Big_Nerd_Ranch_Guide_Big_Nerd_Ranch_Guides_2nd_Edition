@@ -31,7 +31,7 @@ val loudNarration: (String, String) -> String = {
 fun changeNarratorMood() {
     val mood: String
     val modifier: (String) -> String
-    when (Random.nextInt(1..4)) {
+    when (Random.nextInt(1..10)) {
         1 -> {
             mood = "loud"
             modifier = { message ->
@@ -59,6 +59,12 @@ fun changeNarratorMood() {
             modifier = { message ->
                 narrationsGiven++
                 "$message.\n(I have narrated $narrationsGiven things)"
+            }
+        }
+        5 -> {
+            mood = "lazy"
+            modifier = { message ->
+                "Lazy mood, ${message.take(message.length/2)}?"
             }
         }
         else -> {

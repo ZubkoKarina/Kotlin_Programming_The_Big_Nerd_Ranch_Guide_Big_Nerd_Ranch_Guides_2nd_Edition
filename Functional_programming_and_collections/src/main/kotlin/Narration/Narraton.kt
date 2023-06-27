@@ -98,6 +98,9 @@ fun changeNarratorMood() {
 }
 fun createTitle(name: String): String{
     return when{
+        name.equals(name.reversed(), ignoreCase = true) -> "The Palindrome Bearer"
+        name.count{it.isLetter()} > 6 -> "The Extensive"
+        name.all{it.isUpperCase()} -> "The Outstanding"
         name.count{it.lowercase() in "aeiou"} > 4 -> "The Master of Vowel"
         else -> "The Renowned Hero"
     }

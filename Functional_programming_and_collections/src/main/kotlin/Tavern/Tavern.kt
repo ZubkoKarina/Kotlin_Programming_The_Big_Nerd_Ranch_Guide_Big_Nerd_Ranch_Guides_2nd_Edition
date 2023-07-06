@@ -9,4 +9,5 @@ fun visitTavern() {
     val patrons = listOf("Eli", "Karina", "Anna")
     println(patrons[0])
     println(patrons.get(1))
+    println("${patrons.getOrElse(patrons.lastIndex+1){"none"}}")
 }

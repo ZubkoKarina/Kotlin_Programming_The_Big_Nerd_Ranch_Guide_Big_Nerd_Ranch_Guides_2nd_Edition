@@ -1,4 +1,5 @@
-const val HERO_NAME = "KarinaZ"
+
+public const val HERO_NAME = "KarinaZ"
 fun main(args: Array<String>) {
     println("Program arguments: ${args.joinToString()}")
     //после count - литерал функции
@@ -27,6 +28,7 @@ fun main(args: Array<String>) {
         "The hero must have a name"
     }
     Narration.narrate("$HERO_NAME, ${Narration.createTitle(HERO_NAME)}, heads to the town square")
+    Tavern.visitTavern()
 }
 /*
 * fun - именованные функции
@@ -66,6 +68,9 @@ fun main(args: Array<String>) {
 *   -функция спользует другие функции или переменные с более ограниченной областью видимости
 * ::  - ссылка на фукцию
 * Лямбда-функции могут менять переменные и ссылаться на них все своей области видимости.(Захват лямбда-выражений)
-*
-*
+* Список(List) - упорядоченная коллекция значений и может содержать дубликати
+*   listOf - возращяет список, только для чтения, с элементами из аргументов
+*   <> - параметризованый тип
+*   обращение к елементам списка: get() или []
+*   .first() и .last() - возращает 
 */
